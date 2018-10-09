@@ -1,0 +1,121 @@
+$primary-color: #333333;
+@font-face {
+    font-family: 'Digital7';
+    src: url('fonts/digital-7-Mono.ttf');
+    /* IE9 Compat Modes */
+    // src: local('Digital7'), url('../fonts/digital-7.ttf') format('truetype');
+}
+
+body {
+    background-color: $primary-color;
+}
+
+#content {
+    padding-top: 10px;
+    width: 400px;
+    margin: auto;
+}
+
+.well {
+    position: relative;
+    text-align: center;
+    color: rgb(123, 255, 0);
+    font-size: 48px;
+    // border: 1px solid black;
+    background-color: #242424;
+    margin-bottom: 0;
+    border-radius: 10px 10px 0px 0px;
+    // -webkit-box-shadow: inset 0px 0px 15px 7px rgba(0, 0, 0, 0.35);
+    // -moz-box-shadow: inset 0px 0px 15px 7px rgba(0, 0, 0, 0.35);
+    // box-shadow: inset 0px 0px 15px 7px rgba(0, 0, 0, 0.35);
+}
+
+.time-white {
+    color: white;
+    border-bottom: 1px solid #5E5E5E;
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    &:last-child {
+        border-bottom: none;
+    }
+    >div {
+        padding: 0;
+    }
+    .clock-font {
+        font-size: 24px;
+        text-align: left;
+        &.cloned {
+            opacity: 0.2;
+            top: 0;
+        }
+        span {
+            min-width: 10px;
+        }
+    }
+    &:hover .remove {
+        display: block;
+    }
+    .remove {
+        color: white;
+        background-color: rgb(194, 0, 0);
+        padding: 5px;
+        border: none;
+        font-size: 11px;
+        float: right;
+        display: none;
+    }
+}
+
+.clock {
+    position: relative;
+}
+
+.clock-font {
+    font-family: 'Digital7';
+    &.cloned {
+        position: absolute;
+        display: table;
+        top: 0;
+        left: 0;
+        opacity: 0.2;
+        width: 100%;
+    }
+    span {
+        min-width: 20px;
+        text-align: right;
+        display: inline-block;
+    }
+    .colon {
+        text-align: center;
+        &.blink {
+            text-decoration: blink;
+            animation-name: blinker;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+    }
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 0.0;
+    }
+    20% {
+        opacity: 0.0;
+    }
+    40% {
+        opacity: 0.0;
+    }
+    60% {
+        opacity: 1.0;
+    }
+    80% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}

@@ -1,0 +1,22 @@
+#button-wrapper {
+    padding: 0;
+    margin-bottom: 15px;
+    >div {
+        color: black;
+        background-color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 19px;
+        border-left: 1px solid #A8BCDE;
+        cursor: pointer;
+    }
+    >div:first-child {
+        border-bottom-left-radius: 10px;
+        i {
+            margin-right: 5px;
+        }
+    }
+    >div:last-child {
+        border-bottom-right-radius: 10px;
+    }
+}
